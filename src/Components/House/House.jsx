@@ -2,6 +2,20 @@ import React, { Component } from 'react';
 
 
 class House extends Component {
+  
+  
+  
+  
+  handleDeleteHouse = () => {
+    const {id} = this.props.house
+    this.props.deleteHouse(id)
+  }
+  
+  
+  
+  
+  
+  
   render() {
     console.log('PROPS', this.props)
 
@@ -17,7 +31,7 @@ class House extends Component {
           <p> Zip: {this.props.house.zip}</p>
           <p> Mortagage: {this.props.house.mortgage}</p>
           <p> Rent: {this.props.house.rent}</p>
-          <button>Delete</button>
+          <button onClick={this.handleDeleteHouse}> Delete </button>
         </div>
 
 
